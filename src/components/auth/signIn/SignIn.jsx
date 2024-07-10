@@ -81,7 +81,7 @@ const SignIn = () => {
 
       // Fetch user data from Firestore
       const q = query(collection(fireDB, "user"), where("uid", "==", user.uid));
-      onSnapshot(q, (QuerySnapshot) => {
+      const data = onSnapshot(q, (QuerySnapshot) => {
         let userData;
         QuerySnapshot.forEach((doc) => (userData = doc.data()));
         localStorage.setItem("users", JSON.stringify(userData));
@@ -89,9 +89,9 @@ const SignIn = () => {
         setLoading(false);
         navigate("/posthome");
       });
+      return () => data;
     } catch (error) {
-      console.error(error);
-      alert("Error signing in with Google. Please try again.");
+      console.log(error);
       setLoading(false);
     }
   };
