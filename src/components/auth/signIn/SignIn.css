@@ -1,0 +1,150 @@
+/* SignIn.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.signin-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signin-form-title {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #101010;
+}
+
+.signin-form-text {
+  font-family: "Inter", sans-serif;
+  font-size: medium;
+  font-weight: 500;
+  line-height: 20px;
+  color: #878787;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label */
+.form-label {
+  font-family: "Inter", sans-serif;
+  color: #101010;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* Input */
+.form-input {
+  font-family: "Inter", sans-serif;
+  height: 52px;
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101010;
+  border-radius: 8px;
+  border: 1px solid #EDEDED;
+}
+
+/* Password Input */
+.password-input-container {
+  position: relative;
+}
+
+.toggle-password-icon {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  transform: translate(-50, -50);
+  cursor: pointer;
+}
+
+/* Forget Btn */
+.forgot-password-link {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #FE8C00;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: end;
+}
+
+/* Register Btn */
+.signin-button {
+  font-family: "Inter", sans-serif;
+  background-color: #FE8C00;
+  align-items: center;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  border-radius: 100px;
+  padding: 16px 0;
+  margin: 1.5rem auto;
+  width: 100%;
+}
+
+/* Line Container */
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Line Text */
+.line-text {
+  font-family: "Inter", sans-serif;
+  color: #878787;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* Google Icon */
+.google-signin-button {
+  width: 100%;
+  border: none;
+  background: none;
+  margin-top: 1rem;
+}
+
+.google-icon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+/* SignIn Link */
+.register-link {
+  font-family: "Inter", sans-serif;
+  color: #101010;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.register-link .form-link {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: #FE8C00;
+  font-size: 14px;
+  font-weight: 600;
+}
