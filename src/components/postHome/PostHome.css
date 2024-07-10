@@ -1,0 +1,69 @@
+/* PostHome.css */
+.post-home {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 400px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-box-post-home {
+  width: 100vw;
+  height: 62vh;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.content-box-post-home::before {
+  content: "";
+  width: 58px;
+  height: 4px;
+  background-color: #00000020;
+  border-radius: 11px;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 29px);
+}
+
+.illustration {
+  width: 202px;
+  height: 168px;
+  margin: 30px auto 10px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.tracking-btn {
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100px;
+  background-color: #FE8C00;
+}
+
+.logout-link {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: #878787;
+  font-size: 14px;
+  font-weight: 500;
+}
