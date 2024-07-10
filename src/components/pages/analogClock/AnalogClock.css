@@ -5,9 +5,10 @@
   border-radius: 50%;
   position: relative;
   margin-bottom: 20px;
+  background-color: #FE8C00;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
   font-size: 24px;
-  color: #444;
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -50,7 +51,7 @@
 .sec_hand {
   width: 2px;
   height: 118px;
-  background: red;
+  background: #666;
   top: 10.5%;
   left: 50%;
 }

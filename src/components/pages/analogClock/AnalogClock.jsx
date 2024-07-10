@@ -25,19 +25,19 @@ const AnalogClock = ({ speed }) => {
       <div
         className="hour_hand"
         style={{
-          transform: `rotateZ(${(time.getHours() % 12) * -30 - 90}deg)`,
+          transform: `rotateZ(${(time.getHours() % 12) * 30 + 90}deg)`,
         }}
       />
       <div
         className="min_hand"
         style={{
-          transform: `rotateZ(${time.getMinutes() * -6 - 90}deg)`,
+          transform: `rotateZ(${time.getMinutes() * 6 + 90}deg)`,
         }}
       />
       <div
         className="sec_hand"
         style={{
-          transform: `rotateZ(${time.getSeconds() * -6 - 90}deg)`,
+          transform: `rotateZ(${time.getSeconds() * 6 + 90}deg)`,
         }}
       />
       <span className="twelve">12</span>
