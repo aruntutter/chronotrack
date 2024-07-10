@@ -1,11 +1,14 @@
 /* Loader.css */
 .loader-container {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .loader-svg {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 0.5rem;
   color: #FFDcb2;
   fill: #FE8C00;
