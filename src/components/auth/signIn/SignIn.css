@@ -3,9 +3,11 @@
 
 .signin-form-container {
   max-width: 400px;
+  height: 100vh;
   margin: 0 auto;
   padding: 20px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 10px;
 }
