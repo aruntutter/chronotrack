@@ -1,0 +1,113 @@
+/* Home.css */
+.home-page {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 400px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-box {
+  width: 80%;
+  padding: 20px;
+  margin: 40px 20px;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #FE8C00;
+  color: #FFFFFF;
+}
+
+.content-box h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.content-box p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 1rem;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.rectangle {
+  width: 30px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #C2C2C2;
+  margin: 0 5px;
+}
+
+.rectangle.highlight {
+  background-color: #FFFFFF;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skip-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.skip-btn,
+.next-arrow {
+  margin-top: 3rem;
+}
+
+.next-arrow,
+.right-arrow {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.right-arrow {
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #FE8C00;
+  background-color: #FFFFFF;
+}
+
+.circle-loading {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #FFFFFF;
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
