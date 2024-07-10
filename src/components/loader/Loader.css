@@ -1,0 +1,34 @@
+/* Loader.css */
+.loader-container {
+  position: absolute;
+}
+
+.loader-svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  color: #FFDcb2;
+  fill: #FE8C00;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
