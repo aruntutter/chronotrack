@@ -1,0 +1,15 @@
+/* SpeedSlider */
+.speed-slider {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.speed-slider label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.speed-slider input[type="range"] {
+  width: 200px;
+}
