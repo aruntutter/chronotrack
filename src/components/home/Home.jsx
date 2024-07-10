@@ -3,14 +3,22 @@ import "./Home.css";
 import Bg1SVG from "../../assets/bg1.svg";
 import Bg2SVG from "../../assets/bg2.svg";
 import Bg3SVG from "../../assets/bg3.svg";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [step, setStep] = useState(1);
+  const navigate = useNavigate();
 
   const handleNextClick = () => {
     if (step < 3) {
       setStep(step + 1);
+    } else {
+      navigate("/signin");
     }
+  };
+
+  const handleSkipClick = () => {
+    navigate("/signin");
   };
 
   const getBackgroundImage = () => {
@@ -45,13 +53,15 @@ const HomePage = () => {
         <div className="buttons">
           {step < 3 ? (
             <>
-              <button className="skip-btn">Skip</button>
+              <button className="skip-btn" onClick={handleSkipClick}>
+                Skip
+              </button>
               <button className="next-arrow" onClick={handleNextClick}>
                 &rarr;
               </button>
             </>
           ) : (
-            <button className="right-arrow">
+            <button className="right-arrow" onClick={handleNextClick}>
               <div className="circle-loading"></div>
               &rarr;
             </button>

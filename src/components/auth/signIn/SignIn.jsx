@@ -3,9 +3,15 @@ import "./SignIn.css";
 import GoogleSVG from "../../../assets/google-icon.svg";
 import LineSVG from "../../../assets/line-vector.svg";
 import EyeSVG from "../../../assets/eye-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
+  const handleSignupClick = () => {
+    navigate("/signup");
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -75,7 +81,7 @@ const SignIn = () => {
       {/* Register Link */}
       <p className="register-link">
         Don't have an account?{" "}
-        <a href="#" className="form-link">
+        <a href="#" className="form-link" onClick={handleSignupClick}>
           Register
         </a>
       </p>
