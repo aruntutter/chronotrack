@@ -4,6 +4,7 @@ import SignIn from "./components/auth/signIn/SignIn";
 import Home from "./components/home/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PostHome from "./components/postHome/PostHome";
+import TrackingScreen from "./components/trackingScreen/TrackingScreen";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/posthome" element={<PostHome />} />
+        <Route path="/tracking" element={<TrackingScreen />} />
       </Routes>
     </Router>
   );
