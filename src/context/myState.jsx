@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import myContext from "./myContext";
+import { auth } from "../firebase/FirebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
+// myContext;
 
-myContext;
-
-const myState = ({ children }) => {
+const MyState = ({ children }) => {
   const [loading, setLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsAuthenticated(!!user);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
-    <myContext.Provider value={{ loading, setLoading }}>
+    <myContext.Provider value={{ loading, setLoading, isAuthenticated }}>
       {children}
     </myContext.Provider>
   );
 };
 
-export default myState;
+export default MyState;
