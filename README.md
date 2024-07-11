@@ -4,7 +4,7 @@ This project was developed as part of the application process for the Frontend D
 
 ## Demo
 
-For a live demonstration of this project, please visit [here](xyz).
+For a live demonstration of this project, please visit [here](https://frontend-developer-assignment.netlify.app/).
 
 ## Technologies Used
 
