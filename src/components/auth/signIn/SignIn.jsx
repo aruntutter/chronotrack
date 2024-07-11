@@ -1,11 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./SignIn.css";
 import GoogleSVG from "../../../assets/google-icon.svg";
 import LineSVG from "../../../assets/line-vector.svg";
 import EyeSVG from "../../../assets/eye-icon.svg";
 import { useNavigate } from "react-router-dom";
 import myContext from "../../../context/myContext";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
 import { auth, fireDB, googleProvider } from "../../../firebase/FirebaseConfig";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import Loader from "../../loader/Loader";
@@ -22,13 +26,29 @@ const SignIn = () => {
     password: "",
   });
 
+  // Check if user is already authenticated
+  useEffect(() => {
+    const storedUser = localStorage.getItem("users");
+    if (storedUser) {
+      navigate("/posthome");
+    }
+
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        navigate("/posthome");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [navigate]);
+
   // User SignIn function
   const userSignInFunction = async (e) => {
     e.preventDefault();
 
     // validation
     if (userSignIn.email === "" || userSignIn.password === "") {
-      console.log("All fields are required");
+      alert("All fields are required");
       return;
     }
 
