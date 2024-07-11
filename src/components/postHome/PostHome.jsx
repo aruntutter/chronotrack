@@ -3,6 +3,8 @@ import "./PostHome.css";
 import Bg4SVG from "../../assets/bg4.svg";
 import IllustrationSuccess from "../../assets/illustration-success.svg";
 import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase/FirebaseConfig";
 
 const PostHome = () => {
   const navigate = useNavigate();
@@ -11,8 +13,14 @@ const PostHome = () => {
     navigate("/tracking");
   };
 
-  const handleLogout = () => {
-    navigate("/signin");
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      localStorage.removeItem("users");
+      navigate("/signin");
+    } catch (error) {
+      console.error("Error logging out: ", error);
+    }
   };
 
   return (
