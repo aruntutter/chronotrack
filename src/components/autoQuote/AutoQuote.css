@@ -1,0 +1,20 @@
+/* AutoQuote.css */
+.auto-quote-container {
+  width: 310px;
+  height: 150px;
+  margin: 15px auto;
+  color: #878787;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+.quote {
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
